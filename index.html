@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى آلاء ❤️ | صالح ♥ آلاء</title>
+    <!-- خطوط عربية فاخرة مع بدائل نظام سلسة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ==========================================================================
+           1. لوحة الألوان والمتغيرات (Royal Midnight & Champagne Rose Gold)
+           ========================================================================== */
+        :root {
+            --midnight-bg: #050714;
+            --midnight-elevated: #0d1229;
+            --glass-bg: rgba(16, 21, 46, 0.64);
+            --glass-border: rgba(244, 194, 178, 0.28);
+            --champagne-gold: #f6d58e;
+            --rose-gold: #eeb09f;
+            --rose-gold-bright: #ffd5c8;
+            --crimson-heart: #ff2e63;
+            --text-primary: #fff9f7;
+            --text-secondary: #e5c9c2;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 0%, #171b3d 0%, #090c1f 52%, #04050e 100%);
+            color: var(--text-primary);
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.75;
+        }
+
+        .font-amiri {
+            font-family: 'Amiri', Georgia, "Times New Roman", serif;
+        }
+
+        /* ==========================================================================
+           2. كانفاس الخلفية الكونية والألعاب النارية (60fps)
+           ========================================================================== */
+        #skyCanvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* قلوب عائمة تنبثق عند التفاعل مع البطاقات */
+        .burst-heart-item {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 1.35rem;
+            user-select: none;
+            animation: floatHeartUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes floatHeartUp {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0.55) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--tx), var(--ty)) scale(1.35) rotate(var(--rot));
+            }
+        }
+
+        /* ==========================================================================
+           3. بوابة الدخول الأنيقة ("بوابة آلاء")
+           ========================================================================== */
+        #introGate {
+            position: fixed;
+            inset: 0;
+            z-index: 120;
+            background: radial-gradient(circle at center, #1a183b 0%, #070918 75%, #03040b 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.5rem;
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.85s ease, transform 0.85s ease;
+        }
+
+        #introGate.gate-opened {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.05);
+            pointer-events: none;
+        }
+
+        .gate-emblem {
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 50%;
+            background: rgba(246, 213, 142, 0.1);
+            border: 1px solid rgba(246, 213, 142, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.85rem;
+            color: var(--crimson-heart);
+            margin-bottom: 1.25rem;
+            box-shadow: 0 0 35px rgba(255, 46, 99, 0.25);
+            animation: gentlePulse 2.8s ease-in-out infinite;
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .gate-name {
+            font-family: 'Amiri', serif;
+            font-size: clamp(3.4rem, 11vw, 6.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #fff6e5 0%, #f6d58e 45%, #eeb09f 85%, #fff2eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(246, 213, 142, 0.35);
+            margin-bottom: 0.65rem;
+        }
+
+        .gate-sub {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.15rem, 3.2vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 30rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .gate-enter-btn {
+            background: linear-gradient(135deg, #e8998d 0%, #f6d58e 55%, #d98273 100%);
+            color: #080b1c;
+            border: 1px solid rgba(255, 250, 235, 0.8);
+            padding: 0.95rem 2.3rem;
+            border-radius: 999px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 12px 35px rgba(238, 176, 159, 0.35), 0 0 25px rgba(246, 213, 142, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .gate-enter-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 16px 45px rgba(246, 213, 142, 0.45);
+        }
+
+        .gate-enter-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* ==========================================================================
+           4. الهيكل الرئيسي والبطاقات الزجاجية الفاخرة
+           ========================================================================== */
+        .page-shell {
+            position: relative;
+            z-index: 10;
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 2rem 1.1rem 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3.75rem;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.75rem;
+            padding: 1.85rem 1.35rem;
+            box-shadow:
+                0 22px 55px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 240, 225, 0.16);
+        }
+
+        @media (min-width: 640px) {
+            .glass-card {
+                padding: 2.5rem 2.25rem;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.65rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.95rem, 5vw, 2.75rem);
+            font-weight: 700;
+            color: var(--champagne-gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+        }
+
+        /* ==========================================================================
+           5. قسم الترحيب والعدّاد الحي (منذ ٤ أغسطس ٢٠٢٦)
+           ========================================================================== */
+        .hero-card {
+            text-align: center;
+            padding-top: 2.25rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 0.35rem 1.1rem;
+            border-radius: 999px;
+            background: rgba(238, 176, 159, 0.12);
+            border: 1px solid rgba(238, 176, 159, 0.35);
+            color: var(--rose-gold-bright);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-heading {
+            font-family: 'Amiri', serif;
+            font-size: clamp(2.35rem, 6.8vw, 3.85rem);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.85rem;
+        }
+
+        .hero-heading span {
+            color: var(--champagne-gold);
+        }
+
+        .hero-quote {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.2rem, 3.3vw, 1.6rem);
+            color: var(--text-secondary);
+            max-width: 40rem;
+            margin: 0 auto 2.25rem;
+        }
+
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.85rem;
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 640px) {
+            .counter-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.1rem;
+            }
+        }
+
+        .counter-tile {
+            background: rgba(6, 9, 22, 0.72);
+            border: 1px solid rgba(246, 213, 142, 0.32);
+            border-radius: 1.25rem;
+            padding: 1.15rem 0.65rem;
+        }
+
+        .counter-tile.sec-tile {
+            border-color: rgba(238, 176, 159, 0.6);
+            background: linear-gradient(180deg, rgba(238, 176, 159, 0.14), rgba(6, 9, 22, 0.85));
+        }
+
+        .counter-val {
+            font-size: clamp(1.95rem, 4.8vw, 2.75rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+        }
+
+        .sec-tile .counter-val {
+            color: var(--champagne-gold);
+        }
+
+        .counter-unit {
+            font-size: 0.85rem;
+            color: var(--rose-gold);
+            margin-top: 0.3rem;
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           6. بطاقة الموسيقى والكلمات الرومانسية التفاعلية
+           ========================================================================== */
+        .player-top-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(246, 213, 142, 0.18);
+            margin-bottom: 1.5rem;
+        }
+
+        .player-controls-left {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .play-toggle-btn {
+            width: 3.35rem;
+            height: 3.35rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--champagne-gold), var(--rose-gold));
+            color: #070a19;
+            border: none;
+            font-size: 1.25rem;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 22px rgba(246, 213, 142, 0.35);
+            transition: transform 0.2s ease;
+        }
+
+        .play-toggle-btn:hover {
+            transform: scale(1.06);
+        }
+
+        .track-meta-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #ffffff;
+        }
+
+        .track-meta-sub {
+            font-size: 0.82rem;
+            color: var(--rose-gold);
+        }
+
+        .mood-switch-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .mood-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(246, 213, 142, 0.28);
+            color: var(--text-secondary);
+            padding: 0.42rem 0.95rem;
+            border-radius: 999px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.22s ease;
+        }
+
+        .mood-chip.active {
+            background: rgba(246, 213, 142, 0.2);
+            border-color: var(--champagne-gold);
+            color: var(--champagne-gold);
+        }
+
+        .visualizer-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 0.32rem;
+            height: 2.2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .viz-bar {
+            width: 0.25rem;
+            height: 0.45rem;
+            border-radius: 999px;
+            background: linear-gradient(to top, var(--rose-gold), var(--champagne-gold));
+            opacity: 0.45;
+            transition: height 0.25s ease;
+        }
+
+        .is-playing .viz-bar {
+            opacity: 1;
+            animation: eqWave var(--spd, 0.9s) ease-in-out infinite alternate;
+        }
+
+        @keyframes eqWave {
+            0% { height: 0.35rem; }
+            100% { height: var(--maxH, 1.95rem); }
+        }
+
+        .lyrics-stage {
+            background: rgba(6, 9, 22, 0.65);
+            border: 1px solid rgba(238, 176, 159, 0.25);
+            border-radius: 1.35rem;
+            padding: 1.65rem 1.25rem;
+            text-align: center;
+            min-height: 7.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lyric-line {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.4rem, 3.8vw, 2.05rem);
+            color: var(--champagne-gold);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .lyric-fade-out {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
+        .lyric-caption {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.45rem;
+        }
+
+        /* ==========================================================================
+           7. حروف اسم (آ - ل - ا - ء) الشعرية التفاعلية
+           ========================================================================== */
+        .acrostic-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .acrostic-cards-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        .letter-card-btn {
+            background: rgba(8, 12, 28, 0.75);
+            border: 1.5px solid rgba(246, 213, 142, 0.3);
+            border-radius: 1.25rem;
+            padding: 1.1rem 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            color: var(--text-primary);
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .letter-card-btn:hover,
+        .letter-card-btn.selected {
+            border-color: var(--champagne-gold);
+            background: linear-gradient(160deg, rgba(238, 176, 159, 0.2), rgba(14, 19, 44, 0.9));
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+        }
+
+        .letter-glyph {
+            font-family: 'Amiri', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--champagne-gold);
+            line-height: 1.2;
+        }
+
+        .letter-name {
+            font-size: 0.82rem;
+            color: var(--rose-gold);
+            margin-top: 0.2rem;
+            font-weight: 600;
+        }
+
+        .verse-showcase {
+            background: rgba(6, 9, 22, 0.72);
+            border: 1px solid rgba(246, 213, 142, 0.35);
+            border-radius: 1.35rem;
+            padding: 1.75rem 1.4rem;
+            text-align: center;
+            transition: opacity 0.25s ease;
+        }
+
+        .verse-text {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.4rem, 3.6vw, 1.95rem);
+            color: #ffffff;
+            line-height: 1.85;
+            margin-bottom: 0.55rem;
+        }
+
+        .verse-sub {
+            font-size: 0.92rem;
+            color: var(--champagne-gold);
+        }
+
+        /* ==========================================================================
+           8. ظرف الرسالة المختومة بالشمع من صالح
+           ========================================================================== */
+        .envelope-container {
+            max-width: 38rem;
+            margin: 0 auto;
+        }
+
+        .sealed-envelope {
+            background: linear-gradient(155deg, #1b1838 0%, #0d1024 100%);
+            border: 1.5px solid rgba(246, 213, 142, 0.45);
+            border-radius: 1.5rem;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .sealed-envelope:hover {
+            transform: translateY(-4px);
+            border-color: var(--champagne-gold);
+        }
+
+        .wax-emblem {
+            width: 5rem;
+            height: 5rem;
+            margin: 0 auto 1.15rem;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ff3d6e, #9e0b32 75%);
+            border: 2.5px solid var(--champagne-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--champagne-gold);
+            box-shadow: 0 10px 26px rgba(255, 46, 99, 0.45);
+        }
+
+        .unsealed-letter {
+            display: none;
+            background: linear-gradient(180deg, #fffaf2 0%, #fdf1e2 100%);
+            color: #29131c;
+            border: 2.5px solid #d8b25a;
+            border-radius: 1.5rem;
+            padding: 2.1rem 1.6rem;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+            animation: smoothReveal 0.55s ease forwards;
+        }
+
+        @media (min-width: 640px) {
+            .unsealed-letter { padding: 2.85rem 2.5rem; }
+        }
+
+        @keyframes smoothReveal {
+            0% { opacity: 0; transform: translateY(14px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .letter-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.85rem;
+            margin-bottom: 1.4rem;
+            border-bottom: 1px solid rgba(160, 115, 40, 0.28);
+            color: #8a5624;
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .close-letter-btn {
+            background: rgba(158, 11, 50, 0.1);
+            border: 1px solid rgba(158, 11, 50, 0.3);
+            color: #9e0b32;
+            padding: 0.28rem 0.8rem;
+            border-radius: 999px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .letter-paragraphs {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.28rem, 3.2vw, 1.62rem);
+            line-height: 2;
+            color: #2a121b;
+        }
+
+        .letter-paragraphs p {
+            margin-bottom: 1rem;
+        }
+
+        .letter-sign {
+            margin-top: 1.5rem;
+            text-align: left;
+            font-family: 'Amiri', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #9e0b32;
+        }
+
+        /* ==========================================================================
+           9. بطاقات الأسباب والوعود + سماء الأمنيات + الخاتمة
+           ========================================================================== */
+        .deck-card {
+            background: rgba(6, 9, 22, 0.72);
+            border: 1px solid rgba(238, 176, 159, 0.35);
+            border-radius: 1.35rem;
+            padding: 1.9rem 1.4rem;
+            min-height: 10rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 1.4rem;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .deck-quote {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .deck-badge {
+            margin-top: 0.75rem;
+            font-size: 0.82rem;
+            color: var(--champagne-gold);
+            font-weight: 700;
+        }
+
+        .center-actions {
+            text-align: center;
+        }
+
+        .primary-gold-btn {
+            background: linear-gradient(135deg, #f6d58e 0%, #e59d8a 100%);
+            color: #070a19;
+            border: none;
+            padding: 0.85rem 2.1rem;
+            border-radius: 999px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 10px 28px rgba(246, 213, 142, 0.28);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .primary-gold-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 35px rgba(246, 213, 142, 0.42);
+        }
+
+        .primary-gold-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* سماء الأمنيات */
+        .wish-input-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 38rem;
+            margin: 0 auto 1.85rem;
+        }
+
+        @media (min-width: 640px) {
+            .wish-input-row { flex-direction: row; }
+        }
+
+        .wish-field {
+            flex: 1;
+            background: rgba(6, 9, 22, 0.85);
+            border: 1.5px solid rgba(246, 213, 142, 0.35);
+            border-radius: 1rem;
+            padding: 0.82rem 1.1rem;
+            color: #ffffff;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .wish-field:focus {
+            border-color: var(--champagne-gold);
+        }
+
+        .wishes-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .wishes-list { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .wish-item-card {
+            background: rgba(9, 13, 32, 0.82);
+            border: 1px solid rgba(246, 213, 142, 0.32);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+        }
+
+        .wish-item-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--champagne-gold);
+            margin-bottom: 0.45rem;
+        }
+
+        .wish-item-body {
+            font-family: 'Amiri', serif;
+            font-size: 1.32rem;
+            color: #ffffff;
+        }
+
+        /* الخاتمة */
+        .finale-card {
+            text-align: center;
+            border: 1.5px solid rgba(246, 213, 142, 0.5);
+            background: radial-gradient(circle at center, rgba(246, 213, 142, 0.1) 0%, var(--glass-bg) 75%);
+        }
+
+        .finale-title {
+            font-family: 'Amiri', serif;
+            font-size: clamp(2.1rem, 5.5vw, 3.2rem);
+            color: var(--champagne-gold);
+            margin: 0.6rem 0 0.75rem;
+        }
+
+        .finale-text {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.2rem, 3.2vw, 1.55rem);
+            color: var(--text-secondary);
+            max-width: 34rem;
+            margin: 0 auto 1.75rem;
+        }
+
+        .love-alaa-btn {
+            background: linear-gradient(135deg, #ff2e63 0%, #e07a69 55%, #f6d58e 130%);
+            color: #ffffff;
+            border: 1.5px solid rgba(255, 245, 220, 0.75);
+            padding: 1rem 2.5rem;
+            border-radius: 999px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 12px 35px rgba(255, 46, 99, 0.45);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .love-alaa-btn:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 16px 45px rgba(255, 46, 99, 0.65);
+        }
+
+        .eternal-banner {
+            display: none;
+            margin-top: 1.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(246, 213, 142, 0.3);
+            animation: smoothReveal 0.6s ease forwards;
+        }
+
+        .eternal-stamp {
+            display: inline-block;
+            margin-top: 0.65rem;
+            padding: 0.65rem 1.85rem;
+            border-radius: 999px;
+            background: rgba(246, 213, 142, 0.14);
+            border: 1.5px solid var(--champagne-gold);
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.45rem, 4vw, 2.05rem);
+            font-weight: 700;
+            color: var(--champagne-gold);
+        }
+
+        .site-footer {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem 1rem 2.5rem;
+            border-top: 1px solid rgba(246, 213, 142, 0.14);
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- كانفاس النجوم والشهب والألعاب النارية -->
+    <canvas id="skyCanvas" aria-hidden="true"></canvas>
+
+    <!-- ==========================================================================
+         1. بوابة الدخول ("بوابة آلاء")
+         ========================================================================== -->
+    <div id="introGate" role="dialog" aria-label="بوابة آلاء">
+        <div class="gate-emblem">❤️</div>
+        <h1 class="gate-name">آلاء</h1>
+        <p class="gate-sub">
+            "منذ الرابع من أغسطس ٢٠٢٦، صارت كل نجمة في السماء تهمس باسمكِ في عالمنا الخاص."
+        </p>
+        <button id="openWorldBtn" class="gate-enter-btn" onclick="enterAlaaWorld(event)">
+            افتحي عالمنا ❤️
+        </button>
+    </div>
+
+    <!-- ==========================================================================
+         المحتوى الرئيسي للتجربة الرومانسية
+         ========================================================================== -->
+    <main class="page-shell">
+
+        <!-- 2. قسم الترحيب والعدّاد الحي منذ ٤ أغسطس ٢٠٢٦ -->
+        <section class="glass-card hero-card">
+            <span class="hero-tag">✦ من صالح إلى أميرته آلاء • ٤ أغسطس ٢٠٢٦ ✦</span>
+            <h2 class="hero-heading">
+                كل نبضةٍ في قلبي تكتبُ <span>آلاء</span>
+            </h2>
+            <p class="hero-quote font-amiri">
+                "أنتِ الطمأنينة التي لا تغيب، واللحظة الأجمل التي أتمناها أن تطول إلى ما لا نهاية."
+            </p>
+
+            <div class="counter-grid" aria-label="عدّاد حبنا منذ ٤ أغسطس ٢٠٢٦">
+                <div class="counter-tile">
+                    <div id="daysCount" class="counter-val">0</div>
+                    <div class="counter-unit">الأيام</div>
+                </div>
+                <div class="counter-tile">
+                    <div id="hoursCount" class="counter-val">0</div>
+                    <div class="counter-unit">الساعات</div>
+                </div>
+                <div class="counter-tile">
+                    <div id="minutesCount" class="counter-val">0</div>
+                    <div class="counter-unit">الدقائق</div>
+                </div>
+                <div class="counter-tile sec-tile">
+                    <div id="secondsCount" class="counter-val">0</div>
+                    <div class="counter-unit">الثواني</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. بطاقة الموسيقى والكلمات الرومانسية المتزامنة -->
+        <section id="musicSection" class="glass-card">
+            <div class="section-title">
+                <h2>لحنُ قلبنا وكلماته 🎶</h2>
+                <p>موسيقى هادئة مولّدة لحظياً مع أبيات غزلٍ متناغمة لأجلكِ يا آلاء</p>
+            </div>
+
+            <div id="playerContainer">
+                <div class="player-top-bar">
+                    <div class="player-controls-left">
+                        <button id="playPauseBtn" class="play-toggle-btn" onclick="togglePlayback()" aria-label="تشغيل أو إيقاف الموسيقى">
+                            ▶
+                        </button>
+                        <div>
+                            <div id="currentTrackTitle" class="track-meta-title">همس البيانو</div>
+                            <div id="currentTrackSub" class="track-meta-sub">إهداء صالح إلى آلاء</div>
+                        </div>
+                    </div>
+
+                    <div class="mood-switch-group" role="group" aria-label="اختيار طابع اللحن">
+                        <button id="moodPianoBtn" class="mood-chip active" onclick="selectTrackMood('piano')">
+                            همس البيانو
+                        </button>
+                        <button id="moodPassionBtn" class="mood-chip" onclick="selectTrackMood('passion')">
+                            نسمة شغف
+                        </button>
+                    </div>
+                </div>
+
+                <!-- شريط موازن صوتي تفاعلي -->
+                <div class="visualizer-row" aria-hidden="true">
+                    <span class="viz-bar" style="--spd: 0.85s; --maxH: 1.5rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.62s; --maxH: 2.0rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.95s; --maxH: 1.7rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.55s; --maxH: 2.1rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.78s; --maxH: 1.8rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.68s; --maxH: 2.05rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.90s; --maxH: 1.55rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.60s; --maxH: 1.9rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.82s; --maxH: 1.65rem;"></span>
+                    <span class="viz-bar" style="--spd: 0.72s; --maxH: 1.85rem;"></span>
+                </div>
+
+                <!-- سطور الكلمات الشعرية المتبدلة بنعومة -->
+                <div class="lyrics-stage">
+                    <p id="lyricLineDisplay" class="lyric-line">
+                        "يا آلاء، في عينيكِ يهدأ كل شيء ويبتسم الزمان"
+                    </p>
+                    <span class="lyric-caption">كلمات من قلب صالح إلى آلاء</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. حروف اسم (آ - ل - ا - ء) الشعرية التفاعلية -->
+        <section id="acrosticSection" class="glass-card">
+            <div class="section-title">
+                <h2>حروف اسمكِ.. قصيدة حب ✨</h2>
+                <p>اضغطي أو مرّري على كل حرفٍ من حروف اسمكِ لتقرئي ما يكتبه صالح لكِ</p>
+            </div>
+
+            <div class="acrostic-cards-grid">
+                <button class="letter-card-btn selected" onmouseover="previewLetterPoem(0)" onclick="selectLetterPoem(0, this, event)">
+                    <div class="letter-glyph">آ</div>
+                    <div class="letter-name">ألف المد</div>
+                </button>
+                <button class="letter-card-btn" onmouseover="previewLetterPoem(1)" onclick="selectLetterPoem(1, this, event)">
+                    <div class="letter-glyph">ل</div>
+                    <div class="letter-name">اللام</div>
+                </button>
+                <button class="letter-card-btn" onmouseover="previewLetterPoem(2)" onclick="selectLetterPoem(2, this, event)">
+                    <div class="letter-glyph">ا</div>
+                    <div class="letter-name">الألف</div>
+                </button>
+                <button class="letter-card-btn" onmouseover="previewLetterPoem(3)" onclick="selectLetterPoem(3, this, event)">
+                    <div class="letter-glyph">ء</div>
+                    <div class="letter-name">الهمزة</div>
+                </button>
+            </div>
+
+            <div id="verseShowcaseBox" class="verse-showcase">
+                <p id="acrosticVerseLine" class="verse-text">
+                    "آياتُ حُسنكِ في فؤادي أُنزِلت .. فغدوتُ أتلوا في هواكِ قصائدي"
+                </p>
+                <p id="acrosticNoteLine" class="verse-sub">
+                    أنتِ الآية الأولى التي أضاءت سمائي يا آلاء.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. رسالة مختومة بالشمع من صالح -->
+        <section id="letterSection" class="glass-card">
+            <div class="section-title">
+                <h2>رسالة مختومة بالشمع لكِ 💌</h2>
+                <p>انقري على الختم الأحمر لفتح رسالة صالح الخاصة إلى آلاء</p>
+            </div>
+
+            <div class="envelope-container">
+                <div id="sealedEnvelopeBox" class="sealed-envelope" onclick="unsealLoveLetter(event)">
+                    <div class="wax-emblem">ص♥آ</div>
+                    <h3 class="font-amiri" style="font-size: 1.75rem; color: var(--champagne-gold);">
+                        رسالة سرية إلى حبيبتي آلاء
+                    </h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.35rem;">
+                        اضغطي هنا لكسر الختم وقراءة الرسالة
+                    </p>
+                </div>
+
+                <div id="unsealedLetterBox" class="unsealed-letter">
+                    <div class="letter-top">
+                        <span>٤ أغسطس ٢٠٢٦ • عهدٌ لا يتغير</span>
+                        <button class="close-letter-btn" onclick="resealLoveLetter()">إغلاق الرسالة</button>
+                    </div>
+                    <div class="letter-paragraphs">
+                        <p><strong>حبيبتي الغالية آلاء،</strong></p>
+                        <p>
+                            منذ الرابع من أغسطس ٢٠٢٦، وأنا أشعر بأن حياتي قد اكتسبت معنىً أعمق ودفئاً لم أعرفه من قبل. وجودكِ وحده يجعل الأيام الأخف والأجمل، وصوتكِ يترك في قلبي أثراً لا تمحوه المسافات ولا يغيّره مرور الوقت.
+                        </p>
+                        <p>
+                            أحبكِ في بساطتكِ وفي عمقكِ، أحبكِ في ضحكتكِ التي تبعث الحياة من جديد، وفي كل تفصيلةٍ صغيرة تجعلني أدرك كم أنا محظوظٌ بكِ.
+                        </p>
+                        <p>
+                            مهما كبرت الأحلام ومهما تغيرت الفصول، سأبقى دائماً إلى جانبكِ سنداً ورفيقاً ومحبّاً لا يملّ منكِ أبداً.
+                        </p>
+                        <div class="letter-sign">حبيبك صالح</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. بطاقات الأسباب والوعود الأبدية -->
+        <section id="promisesSection" class="glass-card">
+            <div class="section-title">
+                <h2>أسباب حبي لكِ ووعودي 🌹</h2>
+                <p>بطاقات متجددة تحمل مشاعر صالح ووعوده الصادقة لآلاء</p>
+            </div>
+
+            <div id="deckCardBox" class="deck-card">
+                <p id="deckCardQuote" class="deck-quote">
+                    "لأن اسمكِ (آلاء) يعني النِّعَم، وأنتِ أجمل نعمةٍ أكرمني الله بها منذ ٤ أغسطس ٢٠٢٦."
+                </p>
+                <span id="deckCardBadge" class="deck-badge">بطاقة ١ من ١٢</span>
+            </div>
+
+            <div class="center-actions">
+                <button class="primary-gold-btn" onclick="cyclePromiseCard(event)">
+                    البطاقة التالية ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- 7. سماء أمنياتنا ("سماء أمنياتنا") -->
+        <section id="wishSkySection" class="glass-card">
+            <div class="section-title">
+                <h2>سماء أمنياتنا 🌠</h2>
+                <p>اكتبي أمنية أو كلمة حب لتُطلق إلى السماء وتبقى محفوظة في متصفحكِ</p>
+            </div>
+
+            <form class="wish-input-row" onsubmit="addSkyWish(event)">
+                <input id="wishTextInput" class="wish-field" type="text" required maxlength="140" placeholder="اكتبي أمنيتكِ هنا يا آلاء...">
+                <button type="submit" class="primary-gold-btn">أطلقيها للسماء ✨</button>
+            </form>
+
+            <div id="wishCardsContainer" class="wishes-list"></div>
+        </section>
+
+        <!-- 8. الخاتمة ("عهد الأبدية") -->
+        <section id="finaleSection" class="glass-card finale-card">
+            <div style="font-size: 2.35rem;">✦ ❤️ ✦</div>
+            <h2 class="finale-title">عهد الأبدية</h2>
+            <p class="finale-text">
+                "أعدكِ أن يبقى اسمكِ مضيئاً في قلبي كما يضيء في هذه السماء، وأن تبقى حكايتنا أصدق حكاية."
+            </p>
+            <button class="love-alaa-btn" onclick="triggerGrandFinale(event)">
+                أحبكِ يا آلاء
+            </button>
+
+            <div id="eternalSignatureBox" class="eternal-banner">
+                <p class="font-amiri" style="font-size: 1.55rem; color: #ffffff;">
+                    "إلى أبد الآبدين.. ما زلتُ أختاركِ في كل ثانية."
+                </p>
+                <div class="eternal-stamp">صالح ♥ آلاء — منذ ٤ أغسطس ٢٠٢٦</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p class="font-amiri" style="font-size: 1.25rem; color: var(--champagne-gold);">صالح ♥ آلاء — منذ ٤ أغسطس ٢٠٢٦</p>
+        <p style="margin-top: 0.25rem;">إهداء خاص من صالح إلى حبيبته آلاء</p>
+    </footer>
+
+    <script>
+        /* ==========================================================================
+           1. كانفاس السماء الليلية والشهب والألعاب النارية (60fps)
+           ========================================================================== */
+        const skyCanvas = document.getElementById('skyCanvas');
+        const skyCtx = skyCanvas.getContext('2d');
+
+        let viewW = window.innerWidth;
+        let viewH = window.innerHeight;
+        let pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+        let goldenDust = [];
+        let shootingStars = [];
+        let canvasBursts = [];
+        let lastShootingStarTime = 0;
+
+        function resizeSkyCanvas() {
+            viewW = window.innerWidth;
+            viewH = window.innerHeight;
+            pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+            skyCanvas.width = Math.floor(viewW * pixelRatio);
+            skyCanvas.height = Math.floor(viewH * pixelRatio);
+            skyCtx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+        }
+
+        function initGoldenDust() {
+            const count = viewW < 640 ? 55 : 95;
+            goldenDust = [];
+            for (let i = 0; i < count; i++) {
+                goldenDust.push({
+                    x: Math.random() * viewW,
+                    y: Math.random() * viewH,
+                    r: Math.random() * 2.1 + 0.6,
+                    vy: -(Math.random() * 0.28 + 0.08),
+                    vx: (Math.random() - 0.5) * 0.22,
+                    phase: Math.random() * Math.PI * 2,
+                    isRose: Math.random() > 0.65
+                });
+            }
+        }
+
+        function spawnShootingStar() {
+            shootingStars.push({
+                x: Math.random() * viewW * 0.85 + viewW * 0.1,
+                y: Math.random() * viewH * 0.35,
+                vx: -(Math.random() * 5 + 4.5),
+                vy: Math.random() * 2.6 + 2.2,
+                len: Math.random() * 65 + 45,
+                life: 1.0
+            });
+        }
+
+        function spawnCanvasFirework(cx, cy, count) {
+            const colors = ['#f6d58e', '#eeb09f', '#ff2e63', '#fff5e4', '#ff8fab'];
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 5.2 + 1.5;
+                canvasBursts.push({
+                    x: cx,
+                    y: cy,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed - 1.1,
+                    gravity: 0.065,
+                    alpha: 1,
+                    decay: Math.random() * 0.014 + 0.01,
+                    color: colors[i % colors.length],
+                    isHeart: i % 3 === 0,
+                    size: Math.random() * 2.5 + 2
+                });
+            }
+        }
+
+        function renderSkyFrame(timestamp) {
+            skyCtx.clearRect(0, 0, viewW, viewH);
+
+            // الغبار الذهبي والوردي العائم
+            for (let i = 0; i < goldenDust.length; i++) {
+                const d = goldenDust[i];
+                d.x += d.vx;
+                d.y += d.vy;
+                d.phase += 0.025;
+
+                if (d.y < -10) {
+                    d.y = viewH + 10;
+                    d.x = Math.random() * viewW;
+                }
+                if (d.x < -10) d.x = viewW + 10;
+                if (d.x > viewW + 10) d.x = -10;
+
+                const alpha = 0.25 + 0.55 * Math.abs(Math.sin(d.phase));
+                skyCtx.save();
+                skyCtx.globalAlpha = alpha;
+                skyCtx.fillStyle = d.isRose ? '#eeb09f' : '#f6d58e';
+                skyCtx.beginPath();
+                skyCtx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+                skyCtx.fill();
+                skyCtx.restore();
+            }
+
+            // إطلاق شهاب لطيف كل بضع ثوانٍ
+            if (timestamp - lastShootingStarTime > 3800) {
+                spawnShootingStar();
+                lastShootingStarTime = timestamp;
+            }
+
+            for (let i = shootingStars.length - 1; i >= 0; i--) {
+                const s = shootingStars[i];
+                s.x += s.vx;
+                s.y += s.vy;
+                s.life -= 0.016;
+
+                if (s.life <= 0) {
+                    shootingStars.splice(i, 1);
+                    continue;
+                }
+
+                skyCtx.save();
+                skyCtx.globalAlpha = Math.max(0, s.life);
+                const grad = skyCtx.createLinearGradient(s.x, s.y, s.x - s.vx * 8, s.y - s.vy * 8);
+                grad.addColorStop(0, '#fff8dc');
+                grad.addColorStop(1, 'rgba(246, 213, 142, 0)');
+                skyCtx.strokeStyle = grad;
+                skyCtx.lineWidth = 2;
+                skyCtx.beginPath();
+                skyCtx.moveTo(s.x, s.y);
+                skyCtx.lineTo(s.x - s.vx * 7, s.y - s.vy * 7);
+                skyCtx.stroke();
+                skyCtx.restore();
+            }
+
+            // الألعاب النارية والقلوب على الكانفاس
+            for (let i = canvasBursts.length - 1; i >= 0; i--) {
+                const p = canvasBursts[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vy += p.gravity;
+                p.alpha -= p.decay;
+
+                if (p.alpha <= 0) {
+                    canvasBursts.splice(i, 1);
+                    continue;
+                }
+
+                skyCtx.save();
+                skyCtx.globalAlpha = Math.max(0, p.alpha);
+                skyCtx.fillStyle = p.color;
+                if (p.isHeart) {
+                    skyCtx.font = `${Math.round(p.size * 5.2)}px serif`;
+                    skyCtx.fillText('♥', p.x, p.y);
+                } else {
+                    skyCtx.beginPath();
+                    skyCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    skyCtx.fill();
+                }
+                skyCtx.restore();
+            }
+
+            requestAnimationFrame(renderSkyFrame);
+        }
+
+        /* ==========================================================================
+           2. قلوب منبثقة عند النقر على الأزرار والبطاقات
+           ========================================================================== */
+        function popFloatingHearts(event, count) {
+            const symbols = ['❤️', '💖', '✨', '💛', '🌹'];
+            let originX = viewW * 0.5;
+            let originY = viewH * 0.5;
+
+            if (event && typeof event.clientX === 'number' && event.clientX > 0) {
+                originX = event.clientX;
+                originY = event.clientY;
+            }
+
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('span');
+                el.className = 'burst-heart-item';
+                el.textContent = symbols[i % symbols.length];
+                el.style.left = originX + 'px';
+                el.style.top = originY + 'px';
+
+                const theta = Math.random() * Math.PI * 2;
+                const dist = Math.random() * 120 + 55;
+                const tx = Math.cos(theta) * dist;
+                const ty = Math.sin(theta) * dist - 40;
+                const rot = (Math.random() - 0.5) * 110;
+
+                el.style.setProperty('--tx', tx + 'px');
+                el.style.setProperty('--ty', ty + 'px');
+                el.style.setProperty('--rot', rot + 'deg');
+
+                document.body.appendChild(el);
+                setTimeout(function () {
+                    if (el.parentNode) el.parentNode.removeChild(el);
+                }, 1400);
+            }
+        }
+
+        /* ==========================================================================
+           3. محرك الموسيقى الرومانسية والكلمات المتزامنة (Web Audio API)
+           ========================================================================== */
+        let audioContext = null;
+        let isPlayingMusic = false;
+        let selectedMood = 'piano';
+        let melodyTimer = null;
+        let lyricsTimer = null;
+        let stepCounter = 0;
+        let lyricIdx = 0;
+
+        const moodTracks = {
+            piano: {
+                title: 'همس البيانو',
+                sub: 'ألحان هادئة من صالح إلى آلاء',
+                tempoMs: 720,
+                notes: [
+                    261.63, 329.63, 392.00, 493.88,
+                    220.00, 261.63, 329.63, 392.00,
+                    174.61, 220.00, 261.63, 349.23,
+                    196.00, 246.94, 293.66, 392.00
+                ]
+            },
+            passion: {
+                title: 'نسمة شغف',
+                sub: 'نبض دافئ يليق بقلب آلاء',
+                tempoMs: 580,
+                notes: [
+                    293.66, 349.23, 440.00, 587.33,
+                    233.08, 293.66, 349.23, 466.16,
+                    174.61, 261.63, 349.23, 440.00,
+                    220.00, 329.63, 440.00, 523.25
+                ]
+            }
+        };
+
+        const poeticLyrics = [
+            '"يا آلاء، في عينيكِ يهدأ كل شيء ويبتسم الزمان"',
+            '"منذ الرابع من أغسطس ٢٠٢٦، صار اسمكِ نبضاً في صدري"',
+            '"أحبكِ بصوتٍ يهمس للنجوم أنكِ أجمل أقداري"',
+            '"في قربكِ يزهر العمر، وفي طيفكِ يطيب المنام"',
+            '"صالح يراكِ الدنيا كلها، وأنتِ النور الذي لا ينطفئ"'
+        ];
+
+        function ensureAudioReady() {
+            try {
+                const Ctx = window.AudioContext || window.webkitAudioContext;
+                if (!Ctx) return;
+                if (!audioContext) {
+                    audioContext = new Ctx();
+                }
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+            } catch (err) {}
+        }
+
+        function playRomanticVoice(freq, moodKey) {
+            try {
+                ensureAudioReady();
+                if (!audioContext) return;
+
+                const now = audioContext.currentTime;
+                const mainOsc = audioContext.createOscillator();
+                const padOsc = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+
+                mainOsc.type = 'sine';
+                mainOsc.frequency.setValueAtTime(freq, now);
+
+                padOsc.type = moodKey === 'passion' ? 'triangle' : 'sine';
+                padOsc.frequency.setValueAtTime(freq * 0.5, now);
+
+                const peakGain = moodKey === 'passion' ? 0.048 : 0.038;
+                gainNode.gain.setValueAtTime(0.0001, now);
+                gainNode.gain.exponentialRampToValueAtTime(peakGain, now + 0.08);
+                gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 1.9);
+
+                mainOsc.connect(gainNode);
+                padOsc.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+
+                mainOsc.start(now);
+                padOsc.start(now);
+                mainOsc.stop(now + 1.95);
+                padOsc.stop(now + 1.95);
+            } catch (err) {}
+        }
+
+        function startLyricsCycle() {
+            clearInterval(lyricsTimer);
+            lyricsTimer = setInterval(function () {
+                const lineEl = document.getElementById('lyricLineDisplay');
+                if (!lineEl) return;
+                lineEl.classList.add('lyric-fade-out');
+                setTimeout(function () {
+                    lyricIdx = (lyricIdx + 1) % poeticLyrics.length;
+                    lineEl.textContent = poeticLyrics[lyricIdx];
+                    lineEl.classList.remove('lyric-fade-out');
+                }, 480);
+            }, 4600);
+        }
+
+        function startMelodyEngine() {
+            clearInterval(melodyTimer);
+            const track = moodTracks[selectedMood] || moodTracks.piano;
+            isPlayingMusic = true;
+
+            const container = document.getElementById('playerContainer');
+            const btn = document.getElementById('playPauseBtn');
+            if (container) container.classList.add('is-playing');
+            if (btn) btn.textContent = '❚❚';
+
+            playRomanticVoice(track.notes[stepCounter % track.notes.length], selectedMood);
+            stepCounter++;
+
+            melodyTimer = setInterval(function () {
+                if (!isPlayingMusic) return;
+                const activeTrack = moodTracks[selectedMood] || moodTracks.piano;
+                playRomanticVoice(activeTrack.notes[stepCounter % activeTrack.notes.length], selectedMood);
+                stepCounter++;
+            }, track.tempoMs);
+
+            startLyricsCycle();
+        }
+
+        function pauseMelodyEngine() {
+            isPlayingMusic = false;
+            clearInterval(melodyTimer);
+            clearInterval(lyricsTimer);
+
+            const container = document.getElementById('playerContainer');
+            const btn = document.getElementById('playPauseBtn');
+            if (container) container.classList.remove('is-playing');
+            if (btn) btn.textContent = '▶';
+        }
+
+        function togglePlayback() {
+            if (isPlayingMusic) {
+                pauseMelodyEngine();
+            } else {
+                startMelodyEngine();
+            }
+        }
+
+        function selectTrackMood(moodKey) {
+            if (!moodTracks[moodKey]) return;
+            selectedMood = moodKey;
+            stepCounter = 0;
+
+            const pianoBtn = document.getElementById('moodPianoBtn');
+            const passionBtn = document.getElementById('moodPassionBtn');
+            const titleEl = document.getElementById('currentTrackTitle');
+            const subEl = document.getElementById('currentTrackSub');
+
+            if (pianoBtn) pianoBtn.classList.toggle('active', moodKey === 'piano');
+            if (passionBtn) passionBtn.classList.toggle('active', moodKey === 'passion');
+            if (titleEl) titleEl.textContent = moodTracks[moodKey].title;
+            if (subEl) subEl.textContent = moodTracks[moodKey].sub;
+
+            if (isPlayingMusic) {
+                startMelodyEngine();
+            } else {
+                playRomanticVoice(moodTracks[moodKey].notes[0], moodKey);
+            }
+        }
+
+        /* ==========================================================================
+           4. فتح بوابة آلاء مع لمعة ذهبية وتشغيل اللحن فوراً
+           ========================================================================== */
+        function enterAlaaWorld(event) {
+            const gate = document.getElementById('introGate');
+            if (gate) {
+                gate.classList.add('gate-opened');
+            }
+            popFloatingHearts(event, 26);
+            spawnCanvasFirework(viewW * 0.5, viewH * 0.45, 42);
+            startMelodyEngine();
+        }
+
+        /* ==========================================================================
+           5. العدّاد الحي منذ ٤ أغسطس ٢٠٢٦ (2026-08-04T00:00:00)
+           ========================================================================== */
+        const relationshipStart = new Date('2026-08-04T00:00:00');
+
+        function tickLoveCounter() {
+            const now = new Date();
+            const diffMs = Math.abs(now.getTime() - relationshipStart.getTime());
+            const totalSecs = Math.floor(diffMs / 1000);
+
+            const days = Math.floor(totalSecs / 86400);
+            const hours = Math.floor((totalSecs % 86400) / 3600);
+            const minutes = Math.floor((totalSecs % 3600) / 60);
+            const seconds = totalSecs % 60;
+
+            document.getElementById('daysCount').textContent = days.toLocaleString('ar-EG');
+            document.getElementById('hoursCount').textContent = hours.toLocaleString('ar-EG');
+            document.getElementById('minutesCount').textContent = minutes.toLocaleString('ar-EG');
+            document.getElementById('secondsCount').textContent = seconds.toLocaleString('ar-EG');
+        }
+
+        /* ==========================================================================
+           6. حروف اسم (آ - ل - ا - ء) الشعرية التفاعلية
+           ========================================================================== */
+        const letterVerses = [
+            {
+                verse: '"آياتُ حُسنكِ في فؤادي أُنزِلت .. فغدوتُ أتلوا في هواكِ قصائدي"',
+                sub: 'أنتِ الآية الأولى التي أضاءت سمائي يا آلاء.'
+            },
+            {
+                verse: '"لكِ في الضلوعِ مكانةٌ لا تُرتقى .. يا موطنَ الروحِ التي بكِ تَهتدي"',
+                sub: 'لا سكن لقلبي إلا في دفء قربكِ وصوتكِ.'
+            },
+            {
+                verse: '"أنتِ الأمانُ إذا الزمانُ تَقلّبت .. أمواجُهُ، وأنتِ نجمةُ مَوعدي"',
+                sub: 'منذ ٤ أغسطس ٢٠٢٦ وأنتِ أصدق موعدٍ في عمري.'
+            },
+            {
+                verse: '"ءالاءُ ربي في الحياةِ كثيرةٌ .. لكنّ حُبّكِ تاجُها المُتفرّدِ"',
+                sub: 'يا أعظم نعمةٍ يحمد صالح الله عليها كل يوم.'
+            }
+        ];
+
+        let activeLetterIndex = 0;
+
+        function applyLetterPoem(idx) {
+            if (idx === activeLetterIndex) return;
+            activeLetterIndex = idx;
+
+            const btns = document.querySelectorAll('.letter-card-btn');
+            btns.forEach(function (btn, i) {
+                btn.classList.toggle('selected', i === idx);
+            });
+
+            const showcase = document.getElementById('verseShowcaseBox');
+            if (!showcase) return;
+            showcase.style.opacity = '0.25';
+
+            setTimeout(function () {
+                const data = letterVerses[idx];
+                document.getElementById('acrosticVerseLine').textContent = data.verse;
+                document.getElementById('acrosticNoteLine').textContent = data.sub;
+                showcase.style.opacity = '1';
+            }, 160);
+        }
+
+        function previewLetterPoem(idx) {
+            applyLetterPoem(idx);
+        }
+
+        function selectLetterPoem(idx, btnEl, event) {
+            activeLetterIndex = -1; // إجبار التحديث حتى لو كان محدداً
+            applyLetterPoem(idx);
+            popFloatingHearts(event, 12);
+            playRomanticVoice(523.25 + idx * 85, selectedMood);
+        }
+
+        /* ==========================================================================
+           7. ظرف الرسالة المختومة بالشمع من صالح
+           ========================================================================== */
+        function unsealLoveLetter(event) {
+            popFloatingHearts(event, 20);
+            playRomanticVoice(659.25, selectedMood);
+            document.getElementById('sealedEnvelopeBox').style.display = 'none';
+            document.getElementById('unsealedLetterBox').style.display = 'block';
+        }
+
+        function resealLoveLetter() {
+            document.getElementById('unsealedLetterBox').style.display = 'none';
+            document.getElementById('sealedEnvelopeBox').style.display = 'block';
+        }
+
+        /* ==========================================================================
+           8. بطاقات الأسباب والوعود الأبدية
+           ========================================================================== */
+        const loveDeckItems = [
+            'لأن اسمكِ (آلاء) يعني النِّعَم، وأنتِ أجمل نعمةٍ أكرمني الله بها منذ ٤ أغسطس ٢٠٢٦.',
+            'أعدكِ أن أكون لكِ السند والأمان في كل لحظة، وأن أختاركِ في كل يومٍ من جديد.',
+            'لأن ابتسامتكِ وحدها قادرة على تبديد كل تعبٍ يمر بي في يومي.',
+            'أعدكِ أن أستمع لقلبكِ قبل كلماتكِ، وأن أبقى الملاذ الذي ترتاحين إليه.',
+            'لأن وجودكِ يجعل لأبسط اللحظات معنىً وجمالاً لا يُوصف.',
+            'أعدكِ أن نحتفل بذكرى ٤ أغسطس من كل عام بشغفٍ أكبر ومودةٍ أعمق.',
+            'لأن صوتكِ هو الطمأنينة الأقرب إلى روحي وقلبي.',
+            'أعدكِ ألا أترك يدكِ مهما اختلفت الظروف، وأن أبقى قريباً منكِ دائماً.',
+            'لأن طيبة قلبكِ وصدق مشاعركِ يأسران قلبي كل يوم.',
+            'أعدكِ أن أشارككِ أحلامكِ خطوةً بخطوة، وأفرح لكل نجاحٍ تخطينه.',
+            'لأنني معكِ أشعر أنني أملك سكينةً لا تُشترى بثمن.',
+            'أعدكِ يا آلاء أن يبقى حبكِ في قلب صالح عهداً لا ينكسر أبداً.'
+        ];
+
+        let deckPointer = 0;
+
+        function cyclePromiseCard(event) {
+            popFloatingHearts(event, 14);
+            playRomanticVoice(587.33, selectedMood);
+
+            deckPointer = (deckPointer + 1) % loveDeckItems.length;
+            const box = document.getElementById('deckCardBox');
+            box.style.opacity = '0.2';
+            box.style.transform = 'scale(0.98)';
+
+            setTimeout(function () {
+                document.getElementById('deckCardQuote').textContent = '"' + loveDeckItems[deckPointer] + '"';
+                document.getElementById('deckCardBadge').textContent =
+                    'بطاقة ' + (deckPointer + 1).toLocaleString('ar-EG') + ' من ' + loveDeckItems.length.toLocaleString('ar-EG');
+                box.style.opacity = '1';
+                box.style.transform = 'scale(1)';
+            }, 190);
+        }
+
+        /* ==========================================================================
+           9. سماء أمنياتنا (حفظ دائم في localStorage)
+           ========================================================================== */
+        const WISH_STORAGE_KEY = 'saleh_alaa_wish_sky_v1';
+        const starterWishes = [
+            { text: 'أن تبقى ضحكتكِ يا آلاء هي النور الذي يضيء أيامنا دائماً.', label: 'نجمة صالح ✨' },
+            { text: 'أن نحتفل بكل ذكرى لـ ٤ أغسطس ونحن معاً في أجمل حال.', label: 'عهد أبدي 💛' }
+        ];
+
+        function loadWishSky() {
+            const container = document.getElementById('wishCardsContainer');
+            if (!container) return;
+            container.innerHTML = '';
+
+            let saved = [];
+            try {
+                saved = JSON.parse(localStorage.getItem(WISH_STORAGE_KEY) || '[]');
+            } catch (e) {
+                saved = [];
+            }
+
+            const combined = saved.concat(starterWishes);
+            combined.forEach(function (w) {
+                const card = document.createElement('div');
+                card.className = 'wish-item-card';
+
+                const top = document.createElement('div');
+                top.className = 'wish-item-top';
+                top.innerHTML = '<span>✦ نجمة أمنية</span><span></span>';
+                top.lastElementChild.textContent = w.label;
+
+                const body = document.createElement('p');
+                body.className = 'wish-item-body';
+                body.textContent = w.text;
+
+                card.appendChild(top);
+                card.appendChild(body);
+                container.appendChild(card);
+            });
+        }
+
+        function addSkyWish(event) {
+            event.preventDefault();
+            const input = document.getElementById('wishTextInput');
+            const cleanText = input.value.trim();
+            if (!cleanText) return;
+
+            popFloatingHearts(event, 18);
+            spawnCanvasFirework(viewW * 0.5, viewH * 0.35, 28);
+            playRomanticVoice(783.99, selectedMood);
+
+            const dateStr = new Date().toLocaleDateString('ar-EG', { month: 'short', day: 'numeric' });
+            const entry = { text: cleanText, label: 'أمنية آلاء • ' + dateStr };
+
+            try {
+                const list = JSON.parse(localStorage.getItem(WISH_STORAGE_KEY) || '[]');
+                list.unshift(entry);
+                localStorage.setItem(WISH_STORAGE_KEY, JSON.stringify(list));
+            } catch (e) {}
+
+            input.value = '';
+            loadWishSky();
+        }
+
+        /* ==========================================================================
+           10. الخاتمة ("عهد الأبدية") مع الألعاب النارية والتوقيع الخالد
+           ========================================================================== */
+        function triggerGrandFinale(event) {
+            popFloatingHearts(event, 36);
+            playRomanticVoice(523.25, selectedMood);
+            setTimeout(function () { playRomanticVoice(659.25, selectedMood); }, 180);
+            setTimeout(function () { playRomanticVoice(783.99, selectedMood); }, 360);
+
+            // إطلاق دفعات ألعاب نارية وقلوب على الكانفاس
+            for (let k = 0; k < 5; k++) {
+                setTimeout(function () {
+                    const fx = viewW * (0.2 + Math.random() * 0.6);
+                    const fy = viewH * (0.2 + Math.random() * 0.45);
+                    spawnCanvasFirework(fx, fy, 45);
+                }, k * 280);
+            }
+
+            const banner = document.getElementById('eternalSignatureBox');
+            if (banner) {
+                banner.style.display = 'block';
+            }
+        }
+
+        /* ==========================================================================
+           تشغيل التهيئة عند تحميل الصفحة
+           ========================================================================== */
+        window.addEventListener('resize', function () {
+            resizeSkyCanvas();
+            initGoldenDust();
+        });
+
+        window.addEventListener('DOMContentLoaded', function () {
+            resizeSkyCanvas();
+            initGoldenDust();
+            requestAnimationFrame(renderSkyFrame);
+
+            tickLoveCounter();
+            setInterval(tickLoveCounter, 1000);
+
+            loadWishSky();
+        });
+    </script>
+</body>
+</html>
